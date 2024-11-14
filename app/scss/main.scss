@@ -1,0 +1,117 @@
+@use "sass:math";
+
+@import "vars";
+@import "fonts";
+@import "libs";
+@import "modifiers";
+
+
+body {
+  font-size: 16px;
+  min-width: 360px;
+  line-height: 1.5;
+  font-family: $default-font;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 20px auto;
+  padding: 20px 10px;
+  max-width: 400px;
+  max-height: 400px;
+  background: var($background-4);
+  background-image: $background-container;
+}
+
+.card {
+
+}
+
+
+.text-center {
+  text-align: center;
+}
+
+@mixin reset-profile {
+  margin: 0;
+  text-wrap: nowrap;
+}
+
+@mixin btn-main {
+  cursor: pointer;
+  padding: 5px 40px;
+  border: 1px solid;
+}
+
+
+.card {
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: #faf3e9;
+  color: #806e42;
+
+  &__profile {
+    max-width: 300px;
+    text-align: center;
+    //padding: 40px 50px;
+    @include reset-profile;
+  }
+
+  &__profile-content {
+    margin-bottom: 30px;
+
+    .profile-img {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__profile-buttons {
+    display: grid;
+    gap: 10px;
+
+    .btn-main {
+      @include btn-main;
+      border-radius: 50px;
+      background-color: inherit;
+      color: inherit;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        color: #fff;
+        background-color: #806e42;
+      }
+    }
+  }
+}
+
+.title--700 {
+  font-weight: 700;
+  @include reset-profile;
+}
+
+.text--base {
+  font-size: 12px;
+  @include reset-profile;
+}
+
+.center__stat {
+  text-align: center;
+  display: grid;
+  gap: 2px;
+}
+
+.stat-card {
+  cursor: pointer;
+  padding: 20px 40px;
+  background-color: #efd6c4;
+  transition: background 0.3s easy-in-out;
+
+  &:hover {
+    background-color: #eac6ac;
+  }
+}
+
+// ALWAYS END
+@import "media";
