@@ -5,111 +5,148 @@
 @import "libs";
 @import "modifiers";
 
+@mixin reset-default {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin btn-default {
+  cursor: pointer;
+  padding: 5px 40px;
+  border: 1px solid;
+}
 
 body {
   font-size: 16px;
-  min-width: 360px;
   line-height: 1.5;
   font-family: $default-font;
   box-sizing: border-box;
 }
 
 .container {
-  margin: 20px auto;
-  padding: 20px 10px;
-  max-width: 400px;
-  max-height: 400px;
-  background: var($background-4);
-  background-image: $background-container;
-}
+  margin: 40px auto;
+  padding: 40px 30px;
+  //max-width: 400px;
+  //max-height: 400px;
 
-.card {
-
-}
-
-
-.text-center {
-  text-align: center;
-}
-
-@mixin reset-profile {
-  margin: 0;
-  text-wrap: nowrap;
-}
-
-@mixin btn-main {
-  cursor: pointer;
-  padding: 5px 40px;
-  border: 1px solid;
-}
-
-
-.card {
-  margin: 50px;
-  display: flex;
-  justify-content: center;
-  border-radius: 4px;
-  background-color: #faf3e9;
-  color: #806e42;
-
-  &__profile {
-    max-width: 300px;
-    text-align: center;
-    //padding: 40px 50px;
-    @include reset-profile;
+  &--bg-color {
+    background: var($background-1);
   }
 
-  &__profile-content {
-    margin-bottom: 30px;
+  background-image: $background-container;
+  border-radius: $border-radius-s;
+}
 
-    .profile-img {
-      margin-bottom: 15px;
+.card {
+  display: flex;
+  justify-content: space-between;
+  border-radius: $border-radius-m;
+  box-shadow: $card-box-shadow;
+  color: $primary-color;
+  text-align: center;
+  overflow: hidden;
+
+  &--bg-color {
+    background: $background-2;
+  }
+
+
+}
+
+.profile {
+  padding: 30px;
+
+  &__profile-content {
+    margin-bottom: 40px;
+  }
+
+  &__profile-img {
+    margin-bottom: 20px;
+
+    .user-img {
+      border-radius: 50%;
+      border: 0.5px solid $primary-color;
     }
   }
 
-  &__profile-buttons {
+  &__content {
+    @include reset-default;
+  }
+
+  .content--font-m {
+    font-size: $text-size-m;
+  }
+
+  .content--font-xs {
+    font-size: $text-size-xs;
+  }
+
+  &__btn-container {
+    margin: 0 auto;
     display: grid;
     gap: 10px;
-
+    max-width: fit-content;
+    
     .btn-main {
-      @include btn-main;
+      @include btn-default;
+
       border-radius: 50px;
       background-color: inherit;
       color: inherit;
       transition: all 0.3s ease-in-out;
 
+      &--font-s {
+        font-size: $text-size-s;
+      }
+
       &:hover {
-        color: #fff;
-        background-color: #806e42;
+        color: $secondary-color;
+        background-color: $primary-color;
       }
     }
   }
 }
 
-.title--700 {
-  font-weight: 700;
-  @include reset-profile;
-}
 
-.text--base {
-  font-size: 12px;
-  @include reset-profile;
-}
-
-.center__stat {
-  text-align: center;
+.stat {
   display: grid;
+  justify-content: center;
   gap: 2px;
-}
+  text-align: center;
 
-.stat-card {
-  cursor: pointer;
-  padding: 20px 40px;
-  background-color: #efd6c4;
-  transition: background 0.3s easy-in-out;
+  .data--bg-color {
+    background: $background-3;
+    transition: background 0.4s ease-in-out;
 
-  &:hover {
-    background-color: #eac6ac;
+    &:hover {
+      cursor: pointer;
+      background-color: $background-4;
+    }
+  }
+
+  &__data {
+    padding: 20px 30px;
+    display: grid;
+    align-items: center;
+    transition: background 0.4s ease-in-out;
+  }
+
+
+  &__list {
+    @include reset-default;
+
+    .list-item:last-child {
+      @include reset-default;
+    }
+
+    .list-item--font-l {
+      font-size: $text-size-l;
+    }
+
+
+    .list-item--font-xs {
+      font-size: $text-size-xs;
+    }
   }
 }
 

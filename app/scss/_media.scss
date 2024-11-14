@@ -1,47 +1,32 @@
 @import "vars";
 
 
-/*==========  Desktop First  ==========*/
+// Need to fix and add more breakpoints
 
-// ≥1200px
-@include media-breakpoint-down(lg) {
-	
-}
+@media (min-width: $screen-tab-s) {
+  .card {
+    display: block;
 
-// ≥992px
-@include media-breakpoint-down(md) {
+    .profile__btn-container {
+      display: block;
+    }
 
-}
+    .stat {
+      display: flex;
+      justify-content: space-between;
 
-// ≥768px
-@include media-breakpoint-down(sm) {
-
-}
-
-// ≥576px
-@include media-breakpoint-down(xs) {
-
-}
-
-
-/*==========  Mobile First  ==========*/
-
-// ≤576px
-@include media-breakpoint-up(sm) {
+      &__data {
+        padding-inline: 40px;
+        width: 100%;
+      }
+    }
+  }
 
 }
 
-// ≤768px
-@include media-breakpoint-up(md) {
-
-}
-
-// ≤992px
-@include media-breakpoint-up(lg) {
-
-}
-
-// ≤1200px
-@include media-breakpoint-up(xl) {
-	
+@media (min-width: $screen-desk-m) {
+  .container {
+    max-width: 900px;
+    background-color: #fff;
+  }
 }

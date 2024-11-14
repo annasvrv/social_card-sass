@@ -1,5 +1,11 @@
 $default-font: roboto-example, sans-serif;
+$font-bold: 700;
+$text-size-l: 18px;
+$text-size-m: 15px;
+$text-size-s: 12px;
+$text-size-xs: 11px;
 $primary-color: #786450;
+$secondary-color: #faf3e9;
 $background-1: #EAB537FF;
 $background-2: #faf3e9;
 $background-3: #efd6c4;
@@ -8,6 +14,7 @@ $background-container: linear-gradient(to top right, #EEBE6C 0%, #CA7C4E 100%);
 $card-box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
 $border-radius-s: 2px;
 $border-radius-m: 4px;
+$border-radius-circle: 100%;
 
 // screen breakpoints
 
