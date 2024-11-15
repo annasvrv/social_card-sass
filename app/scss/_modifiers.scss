@@ -2,7 +2,23 @@
 
 // modifier classes
 
-.font-bold {
+.font-700 {
   font-weight: $font-bold;
+}
+
+.text-11 {
+  font-size: $text-size-xs;
+}
+
+.text-12 {
+  font-size: $text-size-s;
+}
+
+.text-15 {
+  font-size: $text-size-m;
+}
+
+.text-18 {
+  font-size: $text-size-l;
 }
 
